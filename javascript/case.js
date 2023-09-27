@@ -10,3 +10,8 @@ document.getElementById('btn-case-plus').addEventListener('click', function(){
     console.log(newCaseNumber)
     caseNumberField.value = newCaseNumber;
 });
+
+document.getElementById('btn-case-minus').addEventListener('click', function(){
+    console.log("effort");
+})
+
