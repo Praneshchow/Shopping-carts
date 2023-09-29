@@ -3,11 +3,11 @@ console.log("it's working.");
 function updateCaseNumber(isIncrease){
     const caseNumberField = document.getElementById('case-number-field');
     const caseNumberString = caseNumberField.value;
-    console.log(caseNumberString);
+    
     const previousCaseNumber = parseInt(caseNumberString);
     
     let newCaseNumber;
-
+    
     if (isIncrease === true){
         newCaseNumber = previousCaseNumber + 1;
     }
