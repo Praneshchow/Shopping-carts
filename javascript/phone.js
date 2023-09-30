@@ -1,4 +1,5 @@
 
+// plus and minus updating.  
 function updatePhoneNumber(isIncrease){
     const phoneNumberField = document.getElementById('phone-number-field');
     const phoneNumberString = phoneNumberField.value;

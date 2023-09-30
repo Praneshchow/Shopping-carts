@@ -6,8 +6,8 @@ function getTextElementValueById(elementId){
 }
 
 function setTextElementValueById(elementId, value){
-    const subTotalElement = document.getElementById('sub-total');
-    subTotalElement.innerText = currentSubTotal;
+    const subTotalElement = document.getElementById(elementId);
+    subTotalElement.innerText = value;
 }
 
 
@@ -17,10 +17,12 @@ function calculateSubTotal(){
     const currentCaseTotal = getTextElementValueById('case-total');
 
     const currentSubTotal = currentPhoneTotal + currentCaseTotal;
-    
+
+    setTextElementValueById('sub-total', currentSubTotal);
 
     // calculate Text. 
-    const taxAmount = currentSubTotal * 0.1;
+    const taxAmountString = (currentSubTotal * 0.1).toFixed(2);
+    const taxAmount = parseFloat(taxAmountString);
     setTextElementValueById('tax-amount', taxAmount);
 
     const finalAmount = currentSubTotal + taxAmount;
